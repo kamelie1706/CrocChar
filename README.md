@@ -1,2 +1,2 @@
 # CrocChar
-Character editor for Amstrad Locomotive Basic
+Character editor written in Locomotive Basic for Amstrad 

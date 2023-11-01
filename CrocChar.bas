@@ -1,19 +1,14 @@
 10 'INIT
-20 patnb%=17
-30 patcharnb%=3
-40 DIM pat%(patnb%,patcharnb%)
+20 patnb%=17:patcharnb%=3:DIM pat%(patnb%,patcharnb%)
 50 FOR i=0 TO patnb%
 60 FOR j=0 TO patcharnb%
 70 pat%(i,j)=32
 80 NEXT j
 90 NEXT i
-100 curpat%=0
-110 gc$="X"
-120 m%=2:MODE m%
-130 SYMBOL AFTER 0
+100 curpat%=0:gc$="X":m%=2:MODE m%
+130 SYMBOL AFTER 0:MEMORY (HIMEM-1)
 140 'MAIN MENU
-150 CLS
-160 startchar%=0
+150 CLS:startchar%=0
 170 ?"-------------------"
 180 ?"|    CrocChar     |"
 190 ?"-------------------"

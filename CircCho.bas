@@ -4,7 +4,7 @@
 40 IF m=0 THEN xp=1:yp=2:yo=13:xo=13:r=6:c$="XX":ci$="00"
 50 IF m=1 THEN xp=1:yp=1:yo=13:xo=21:r=12:c$="XX":ci$="00"
 60 IF m=2 THEN xp=2:yp=1:yo=13:xo=41:r=12:c$="XX":ci$="00"
-70 MODE m:CLS:c$="X":ts%=TIME
+70 MODE m:CLS:ts%=TIME
 80 'PYTHAGORE
 90 FOR i=0 TO r STEP 0.1
 100 xt=SQR(r^2-i^2)

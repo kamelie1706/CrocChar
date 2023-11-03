@@ -15,8 +15,7 @@
 140 LOCATE 1,1:?"PYTHAGORE":?"MODE ";USING "#";m:?USING "##";(INT(TIME/300)-ts%):?"SEC":INPUT "",k$
 150 'SIN/COS - BEST RESULT
 160 CLS:ts%=INT(TIME/300):r%=8*r
-170 FOR n%=0 TO 360:s%(n%)=SIN(n%)*r%:c%(n%)=COS(n%)*r%:NEXT
-180 FOR n%=0 TO 360:LOCATE xp*s%(n%)/8+xo,yp*c%(n%)/8+yo:?c$;:LOCATE s%(n%)/8+xo,c%(n%)/8+yo:?ci$;:NEXT n%
+170 FOR n%=0 TO 360:s%(n%)=SIN(n%)*r%:c%(n%)=COS(n%)*r%:LOCATE xp*s%(n%)/8+xo,yp*c%(n%)/8+yo:?c$;:LOCATE s%(n%)/8+xo,c%(n%)/8+yo:?ci$;:NEXT n%
 190 LOCATE 1,1:?"SIN/COS":?"MODE ";USING "#";m:?USING "##";(INT(TIME/300)-ts%):?"SEC":INPUT "",k$
 200 NEXT j
 210 GOTO 10

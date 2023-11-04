@@ -6,7 +6,7 @@
 60 IF m=2 THEN xp=2:yp=1:yo=13:xo=41:r=12:c$="X":ci$="0"
 70 MODE m:CLS:ts%=INT(TIME/300)
 80 'PYTHAGORE
-90 FOR i=0 TO r STEP 0.022 'Higher step => increase speed / decrease quality
+90 FOR i=0 TO r STEP 0.1 'Higher step => increase speed / decrease quality
 100 xt=SQR(r^2-i^2):yt=i
 110 GOSUB 290
 120 NEXT i

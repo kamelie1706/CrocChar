@@ -13,14 +13,14 @@
 130 LOCATE 1,1:?"PYTHAGORE":?"MODE ";USING "#";m:?USING "##";(INT(TIME/300)-ts%):?"SEC":INPUT "",k$
 140 'SIN/COS - BEST RESULT
 150 CLS:ts%=INT(TIME/300):r%=8*r
-160 FOR n%=0 TO 90 'Higher step => descrease speed / increase quality
+160 FOR n%=0 TO 90 step 2 'Higher step => descrease speed / increase quality
 170 s%(n%)=SIN(n%)*r%:c%(n%)=COS(n%)*r%
 180 xt=s%(n%)/8:yt=c%(n%)/8:GOSUB 290
 190 NEXT n%
 200 LOCATE 1,1:?"SIN/COS":?"MODE ";USING "#";m:?USING "##";(INT(TIME/300)-ts%):?"SEC":INPUT "",k$
 210 'SIN/COS - PRECALC
 220 CLS:ts%=INT(TIME/300):r%=8*r
-230 FOR n%=0 TO 90 'Higher step => descrease speed / increase quality
+230 FOR n%=0 TO 90 step 2 'Higher step => descrease speed / increase quality
 240 xt=s%(n%)/8:yt=c%(n%)/8:GOSUB 290
 250 NEXT n%
 260 LOCATE 1,1:?"SIN/COS":?"PRE CALC":?"MODE ";USING "#";m:?USING "##";(INT(TIME/300)-ts%):?"SEC":INPUT "",k$

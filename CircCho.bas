@@ -1,4 +1,4 @@
-10 DEG:DIM s%(90),c%(90),rt(30),r$(30):ri%=0:scp=3:pp=0.5:louvre=1
+10 DEG:DIM s%(90),c%(90),rt(30),r$(30):ri%=0:scp=3:pp=0.3:louvre=0
 20 FOR j=0 TO 2
 30 m=j
 40 IF m=0 THEN xp=1:yp=2:yo=13:xo=13:r=6:c$="X":ci$="0"
@@ -30,14 +30,14 @@
 300 IF louvre THEN LOCATE 1,1:?"SIN/COS":?"PRE CALC":?"MODE ";USING "#";m:?USING "##";rt(ri%):?"SEC":INPUT "",k$
 310 'SIN/COS - PLOT
 320 CLS:ts%=INT(TIME/300):ri%=ri%+1:r$(ri%)="MODE "+STR$(m)+" SIN/COS PLOT "
-330 FOR n%=0 TO 360 STEP 1 'Higher step => descrease speed / increase quality
+330 FOR n%=0 TO 360 STEP 1 'Higher step => increase speed / decrease quality
 340 ORIGIN 320,200:PLOT SIN(n%)*200,COS(n%)*200
 350 NEXT n%
 360 rt(ri%)=(INT(TIME/300)-ts%)
 370 IF louvre THEN LOCATE 1,1:?"SIN/COS":?"PLOT":?"MODE ";USING "#";m:?USING "##";rt(ri%):?"SEC":INPUT "",k$
 380 'SIN/COS - DRAW
 390 CLS:ts%=INT(TIME/300):PLOT 320,200:ri%=ri%+1:r$(ri%)="MODE "+STR$(m)+" SIN/COS DRAW "
-400 FOR n%=0 TO 360 STEP 1 'Higher step => descrease speed / increase quality
+400 FOR n%=0 TO 360 STEP 1 'Higher step => increase speed / decrease quality
 410 DRAW SIN(n%)*200,COS(n%)*200
 420 NEXT n%
 430 DRAW 320,200
